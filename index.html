@@ -67,7 +67,10 @@
 
                                 <h3>#boraCodar um Kanban </h3>
                                 <p>
-                                    Novo desafio do #boraCodar da Rocketseat, onde é proposto construit um quadro de Kanban.
+                                    Novo desafio do #boraCodar da Rocketseat, onde é proposto construit um quadro de Kanban. Novo desafio do #boraCodar da Rocketseat, onde é proposto construit um quadro de Kanban. Novo desafio do #boraCodar da Rocketseat, onde é proposto construit um quadro
+                                    de Kanban. Novo desafio do #boraCodar da Rocketseat, onde é proposto construit um quadro de Kanban. Novo desafio do #boraCodar da Rocketseat, onde é proposto construit um quadro de Kanban. Novo desafio do #boraCodar
+                                    da Rocketseat, onde é proposto construit um quadro de Kanban. Novo desafio do #boraCodar da Rocketseat, onde é proposto construit um quadro de Kanban.
+
                                 </p>
                                 <div class="tags">
                                     <span>Rocketseat</span>
@@ -75,7 +78,7 @@
                                 </div>
                             </div>
 
-                            <div class="card">
+                            <div class="card limit-text">
 
                                 <h3>Manter a ofensiva </h3>
                                 <p>
@@ -112,7 +115,6 @@
                         <h2>Feito</h2>
                         <div class="cards">
                             <div class="card">
-                                <!-- inserir essa classe para por os 3 pontinhos no final "limit-text". Script no fim do body.-->
                                 <h3>#boraCodar um Kanban </h3>
                                 <p>
                                     Novo desafio do #boraCodar da Rocketseat, onde é proposto construit um quadro de Kanban.
@@ -140,6 +142,17 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+    <script>
+        const elements = document.querySelectorAll('.card p')
+        const LIMIT = 140
+
+        for (let p of elements) {
+            const aboveLimit = p.innerText.length > LIMIT
+            const dotsOrEmpty = aboveLimit ? '...' : ''
+
+            p.innerText = p.innerText.substring(0, LIMIT) + dotsOrEmpty
+        }
+    </script>
 </body>
 
 </html>
